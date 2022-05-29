@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinebliss</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='assets/style.css') }}"
+    />
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  </head>
+  <nav class="navbar navbar-light" style="background-color: #1a0c41">
+    <a class="navbar-brand" href="#">
+      <img
+        src="{{ url_for('static', filename='assets/cinebliss.png') }}"
+        alt="logo"
+        class="w-6/12 md:w-5/12"
+        class="d-inline-block align-top"
+      />
+    </a>
+    <header>
+      <form id="form">
+        <input type="text" placeholder="Search" id="search" class="search" />
+      </form>
+    </header>
+  </nav>
+  <body class="bg-black text-gray-100">
+    <main class="bg-primary_black bg-no-repeat min-h-screen w-full">
+      <section
+        id="head"
+        class="h-screen relative bg-no-repeat pb-8 pl-6 flex justify-end items-end bg-cover"
+      >
+        <style>
+          #head {
+            background-image: url("static/assets/encanto.jpg");
+          }
+        </style>
+
+        <div>
+          <h2 class="text-6xl font-semibold text-white my-4">Encanto</h2>
+          <p class="w-11/12 md:w-5/12 font-medium text-white my-4">
+            The tale of an extraordinary family, the Madrigals, who live hidden
+            in the mountains of Colombia, in a magical house, in a vibrant town,
+            in a wondrous, charmed place called an Encanto. The magic of the
+            Encanto has blessed every child in the family with a unique gift
+            from super strength to the power to heal—every child except one,
+            Mirabel. But when she discovers that the magic surrounding the
+            Encanto is in danger, Mirabel decides that she, the only ordinary
+            Madrigal, might just be her exceptional family's last hope.
+          </p>
+          <div class="flex my-4">
+            <button
+              class="flex items-center py-2 px-5 rounded-md"
+              style="background-color: #1a0c41"
+            >
+              <ion-icon name="play" class="text-2xl"></ion-icon>
+              <span class="ml-3 font-medium"> Play </span>
+            </button>
+
+            <button
+              class="ml-4 text-white flex items-center bg-opacity-80 py-2 px-5 rounded-md"
+              style="background-color: #1a0c41"
+            >
+              <ion-icon
+                name="information-circle-outline"
+                class="text-2xl"
+              ></ion-icon>
+              <span class="ml-3 font-medium"> More Info </span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section
+      class="flex flex-col md:flex-row items-center bg-cover border-gray-900 border-b-8"
+      style="min-height: 70vh"
+    >
+      <div
+        class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10"
+      >
+        <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+          Not sure what to watch?
+        </h2>
+        <h5 class="md:text-xl text-lg">
+          We got you covered! Just type your favourite movie title and get
+          similar movies recommended ;)
+        </h5>
+ <br>
+          <div class="button1" >
+            <a href="{{url_for('recommendation')}}" button type="button" style="font-weight:bold;">Get Recommendations</a></button>
+        </div>
+       
+      </div>
+      <div class="md:w-1/2 flex justify-center items-center">
+        <img
+          src="{{ url_for('static', filename='assets/tv.png') }}"
+          class="w-8/12"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <div id="tags"></div>
+    <div id="myNav" class="overlay">
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      
+      <!-- Overlay content -->
+      <div class="overlay-content" id="overlay-content"></div>
+
+      <a href="javascript:void(0)" class="arrow left-arrow" id="left-arrow"
+        >&#8656;</a
+      >
+
+      <a href="javascript:void(0)" class="arrow right-arrow" id="right-arrow"
+        >&#8658;</a
+      >
+    </div>
+    <main id="main"></main>
+    <div class="pagination">
+      <div class="page" id="prev">Previous Page</div>
+      <div class="current" id="current">1</div>
+      <div class="page" id="next">Next Page</div>
+    </div>
+
+    <script src="{{ url_for('static', filename='assets/script.js') }}"></script>
+  </body>
+</html>

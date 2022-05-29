@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinebliss</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='assets/style.css') }}"
+    />
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  </head>
+  <nav class="navbar navbar-light" style="background-color: #1a0c41">
+    <a class="navbar-brand" href="#">
+      <img
+        src="{{ url_for('static', filename='assets/cinebliss.png') }}"
+        alt="logo"
+        class="w-6/12 md:w-5/12"
+        class="d-inline-block align-top"
+      />
+    </a>
+
+  </nav>
+  <body class="bg-black text-gray-100">
+    <section
+      class="flex flex-col md:flex-row items-center bg-cover border-gray-900 border-b-8"
+      style="min-height: 70vh"
+    >
+      <div
+        class="justify-center text-center md:text-center p-5 md:p-10"
+      >
+        <div><h2 class="md:text-5xl text-4xl font-semibold mb-4">
+          Type the title of your favourite movie!
+        </h2>
+        <br>
+        <header>
+            <form id="form" action="/recommend_movies" method="post">
+              <input name="title" type="text" placeholder="Enter the title here!" id="search" class="search" />
+            </form>
+          </header>
+        <br>
+        <br>
+        {% if data %}
+
+             {% for i in data %}
+             <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                <div class="card-header">{{i}}</div>
+              </div>
+             {% endfor %}
+
+            {% endif %}
+    </section>
+
+
+    <script src="{{ url_for('static', filename='assets/script.js') }}"></script>
+  </body>
+</html>

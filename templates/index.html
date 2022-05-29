@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block content %}
+<header class="min-h-screen bg-black bg-opacity-75 showcase border-gray-600 border-b-8 flex justify-center items-center bg-no-repeat" >
+    <style>header{background-image: url("static/assets/bg.png")}</style>
+    <div class="z-10 h-full py-50 md:py-0 text-gray-100 text-center flex items-center flex-col">
+        <br>
+        <div class="msg">{{ msg }}</div>
+        <br>
+        <h1 class="font-semibold text-4xl md:text-5xl w-12/12 text-center">
+            Cinebliss and chill.
+        </h1>
+        <h3 class="text-xl md:text-xl py-5">
+            Watch anywhere. Watch anytime.
+        </h3>
+        <h4 class="text-sm md:text-lg pb-3">
+            Ready to watch? Sign up or login!
+        </h4>
+        <br>
+        <br>
+        <div class="button1" >
+            <a href="{{url_for('register')}}" button type="button" style="font-weight:bold;">Sign Up</button>
+        </div>
+        <br>
+        <div class="button1" >
+            <a href="{{url_for('login')}}" button type="button" style="font-weight:bold;">Login</button>
+        </div>
+    </div>
+</header>
+
+<section class='flex flex-col md:flex-row items-center bg-cover border-gray-900 border-b-8' style="min-height: 70vh;">
+    <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10 ">
+        <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+            Get the best recommendations.
+        </h2>
+        <h5 class="md:text-xl text-lg">
+            If you wish to watch a movie similar to your favourite movie, this is the right place !
+        </h5>
+    </div>
+    <div class='md:w-1/2 flex justify-center items-center'>
+        <img src= "{{ url_for('static', filename='assets/tv.png') }}" class="w-8/12" alt="">
+    </div>
+</section>
+
+<section class='flex flex-col md:flex-row items-center border-gray-900 border-b-8' style="min-height: 70vh;">
+    <div class='md:w-1/2 flex justify-center items-center order-2'>
+        <img src="{{ url_for('static', filename='assets/mobile-0819.png') }}" class="w-8/12" alt="">
+    </div>
+
+    <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10">
+        <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+            All your favourite movies at one place.
+        </h2>
+        <h5 class="md:text-xl text-lg">
+            You will always have something to watch ;)
+        </h5>
+    </div>
+    
+</section>
+
+{% endblock content %}
