@@ -50,7 +50,9 @@ In this project i've made a "Hybrid recommendation system".
 
 ### For Sign-up and Login functionality
  - Go to your MySQL and run the following command:
-  CREATE DATABASE IF NOT EXISTS `Credentials` ;
+  
+  
+CREATE DATABASE IF NOT EXISTS `Credentials` ;
 USE `Credentials`;
 
 CREATE TABLE IF NOT EXISTS `accounts`(
