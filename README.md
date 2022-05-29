@@ -63,6 +63,8 @@ CREATE TABLE IF NOT EXISTS `accounts`(
 ) ;
 
 ### For getting similarity.pkl 
+
+- unzip the dataset folder
 - Run the commands in jupyter notebook
 
 ## Sources of the dataset
