@@ -52,7 +52,7 @@ In this project i've made a "Hybrid recommendation system".
  - Go to your MySQL and run the following command:
   
   
-### `CREATE DATABASE IF NOT EXISTS `Credentials` ;
+CREATE DATABASE IF NOT EXISTS `Credentials` ;
 USE `Credentials`;
 
 CREATE TABLE IF NOT EXISTS `accounts`(
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `accounts`(
     `password1` varchar(255) NOT NULL,
     `password2` varchar(255) NOT NULL,
     PRIMARY KEY (`email`)
-) ;`
+) ;
 
 ### For getting similarity.pkl 
 
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `accounts`(
 ## To run this project on your local machine
 - Complete the Requirements
 - Take a copy of this Repository in your local drive
-- Run this Command on your Terminal/cmd : >>flask run
+- Run this Command on your Terminal/cmd : `flask run`
 
 ## Sources of the dataset
 
