@@ -67,6 +67,11 @@ CREATE TABLE IF NOT EXISTS `accounts`(
 - unzip the dataset folder
 - Run the commands in jupyter notebook
 
+## To run this project on your local machine
+- Complete the Requirements
+- Take a copy of this Repository in your local drive
+- Run this Command on your Terminal/cmd : >>flask run
+
 ## Sources of the dataset
 
 - https://www.kaggle.com/carolzhangdc/imdb-5000-movie-dataset
