@@ -30,3 +30,12 @@ In this project i've made a "Hybrid recommendation system".
 
 **Backend:** Flask , Python
 
+## Features
+
+- Recommendation engine based on hybrid filtering i.e. a combination of content-based (which includes genre, actors, overview of a movie into consideration) and collaborative filtering (which calculates the similarity between movies on the basis of ratings given by different users).
+- Sign up and login
+- Filtering on the basis of genre
+- Searching a movie by title
+- To know more, hover over the movie's poster
+- Play movie trailer by clicking on know more
+
